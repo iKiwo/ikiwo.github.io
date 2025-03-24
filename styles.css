@@ -5,10 +5,18 @@
     font-family: Arial, sans-serif;
 }
 
+/* Ajustamos el body para usar Flexbox */
+html, body {
+    height: 100%; /* Aseguramos que ocupe toda la altura del viewport */
+}
+
 body {
     background-color: #f0f0f0;
     color: #333;
     line-height: 1.6;
+    display: flex; /* Usamos Flexbox */
+    flex-direction: column; /* Elementos en columna */
+    min-height: 100vh; /* Altura mínima del viewport */
 }
 
 header {
@@ -20,6 +28,10 @@ header {
 
 header h1 {
     font-size: 2em;
+}
+
+main {
+    flex: 1; /* El main crece para llenar el espacio disponible */
 }
 
 .addon-list {
@@ -72,9 +84,8 @@ footer {
     padding: 20px;
     background-color: #333;
     color: white;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+    width: 100%; /* Aseguramos que ocupe todo el ancho */
+    flex-shrink: 0; /* Evita que el footer se encoja */
 }
 
 /* Adaptación para móviles */
